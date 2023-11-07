@@ -11,8 +11,8 @@ function solution(players, callings) {
     players[callIndex - 1] = item;
     players[callIndex] = front;
 
-    mapPlayers.set(item, mapPlayers.get(item) - 1);
-    mapPlayers.set(front, mapPlayers.get(front) + 1);
+    mapPlayers.set(item, callIndex - 1);
+    mapPlayers.set(front, callIndex);
   });
   return players;
 }
